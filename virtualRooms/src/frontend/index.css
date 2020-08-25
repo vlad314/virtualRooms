@@ -1,0 +1,182 @@
+.room {
+	border: 5px solid #0040c7;
+	/*width: 250px;*/
+	padding: 10px;
+	width: 30%;
+	height:auto;
+	float: left;
+	margin-top: 1.66%;
+	margin-left: 3%;
+}
+
+#chatdiv{
+	display:block;
+	margin-top: 1.66%;
+	margin-left: 3%;
+}
+
+.send{
+	display:block;
+	margin-top: 1.66%;
+	margin-left: 3%;
+	font-size: x-large;
+}
+.globalroom{
+	display:block;
+	margin-top: 1.66%;
+	margin-left: 3%;
+}
+
+
+#userId {
+	/*border: 5px solid #0040c7;*/
+	/*width: 250px;*/
+	/*display:block;*/
+	/*padding: 10px;*/
+	/*width: 25%;*/
+	height:30px;
+	/*float: left;*/
+	margin-top: 1.66%;
+	margin-left: 3%;
+	margin-bottom: 5%;
+	font-size: x-large;
+}
+
+
+
+.usersp {
+	/*border: 5px solid #0040c7;*/
+	/*font: italic small-caps bold 16px/2 cursive;*/
+	/*width: 250px;*/
+	/*display:block;*/
+	/*padding: 10px;*/
+	/*width: 25%;*/
+	height:30px;
+	/*float: left;*/
+	margin-top: 1.66%;
+	margin-left: 3%;
+	margin-bottom: 1%;
+	font-size: x-large;
+}
+
+.user {
+	border: 5px solid #c7c7c7;
+	text-align: center;
+	font: small-caps bold 16px;
+	font-size: x-large;
+	/*width: 250px;*/
+	/*display:block;*/
+	/*padding: 10px;*/
+	/*width: 25%;*/
+	height:30px;
+	/*float: left;*/
+	margin-top: 1.66%;
+	/*margin-left: 3%;*/
+	margin-bottom: 1%;
+}
+
+
+#create {
+	/*border: 5px solid #0040c7;*/
+	/*width: 250px;*/
+	display:block;
+	text-align: center;
+	font-size: larger;
+	padding: 10px;
+	width: 33%;
+	height:auto;
+	/*float: left;*/
+	margin-top: 1.66%;
+	margin-left: 3%;
+}
+
+/*.room {
+	padding: 15px;
+}*/
+
+.hidden-el{
+	display: none;
+}
+
+.textclass{
+	width: -webkit-fill-available;; height: 100px; border: solid 1px #cccccc; margin-bottom: 5px;
+}
+
+.donejoin{
+	width: -webkit-fill-available;
+    background-color: yellow;
+    font: message-box;
+    font-size: x-large;
+}
+
+#createroom{
+    font: message-box;
+    font-size: larger;
+    margin-top: 1.66%;
+	margin-left: 3%;
+}
+
+#textbox{
+    font: message-box;
+    font-size: larger;
+    margin-top: 1.66%;
+	margin-left: 3%;
+	width: -webkit-fill-available;
+}
+
+#messagesid{
+	font: message-box;
+    font-size: larger;
+    margin-bottom: 5px;
+	margin-left: 3%;
+	min-height: 250px;
+	border: solid 1px #cccccc; 
+	width: -webkit-fill-available;
+	background: white;
+}
+
+#chatroom{
+	font: italic small-caps bold 16px/2 cursive;
+}
+
+#roomnameinn{
+	font: italic small-caps bold 16px/2 cursive;
+    font-size:  x-large;
+    color: red;
+    margin-left: 3%;
+}
+
+#roomdiv{
+	font: italic small-caps bold 16px/2 cursive;
+    font-size: larger;
+    color: red;
+    border-bottom: solid 1px #cccccc; 
+    margin-bottom: 15px;
+}
+
+#roomspan{
+	/*font: small-caps bold 16px/2  ;*/
+    font-size:  x-large;
+}
+
+#chatdiv{
+	border: solid 13px #00cccc; 
+	margin : 20px;
+	margin-left: 3%;
+	padding : 10px;
+	background: lightgrey;
+}
+
+#welcome{
+	font-size: larger;
+}
+
+#newroomname1{
+	font-size: larger;
+}
+
+#donecreate{
+	font-size: larger;
+}
+
+
