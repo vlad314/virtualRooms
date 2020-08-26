@@ -29,15 +29,16 @@ public:
   void remove_user_from_room(const std::string &room, const std::string &user);
   void remove_user_from_room_ptr(const std::string &room,
                                  websocket_connection &connection);
+  std::unordered_map<std::string, std::list<std::string>> &get_m_rooms();
+  std::unordered_map<websocket_connection *, std::string> &get_m_conns_room();
+
+private:
   std::vector<std::string> m_ids;
   std::unordered_map<std::string, std::list<std::string>> m_rooms;
   std::unordered_map<std::string, std::list<websocket_connection *>>
       m_rooms_ptr;
   std::unordered_map<websocket_connection *, std::string> m_conns_room;
-  // templated change() fct that can call any of the above
   std::unordered_set<websocket_connection *> get_connections();
-
-private:
   std::string m_client_root;
   std::unordered_set<websocket_connection *> m_connections;
 };
