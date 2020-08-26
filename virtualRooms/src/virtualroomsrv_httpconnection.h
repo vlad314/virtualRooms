@@ -14,10 +14,9 @@ namespace virtualroomsrv {
 class http_connection : public std::enable_shared_from_this<http_connection> {
 public:
   using userId = std::string;
+
   http_connection(boost::asio::ip::tcp::socket socket,
                   std::shared_ptr<connection_utils> &c_utils);
-  // void run();
-  std::shared_ptr<std::string> m_userid;
 
 private:
   boost::asio::ip::tcp::socket m_socket;
@@ -28,8 +27,7 @@ private:
   void fail(boost::beast::error_code ec, char const *what);
   void on_read(boost::beast::error_code ec, std::size_t);
   void on_write(boost::beast::error_code ec, std::size_t, bool close);
-  std::unordered_map<userId, std::shared_ptr<websocket_connection>>
-      m_ws_conns_vec;
 };
+
 } // namespace virtualroomsrv
 } // namespace virtualroom

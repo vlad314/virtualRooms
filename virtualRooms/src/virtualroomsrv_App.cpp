@@ -15,14 +15,6 @@ App::App(const std::string_view &cfgFile) : m_ioCtx{1} {
 
   listen->accept();
 
-  // boost::asio::signal_set signals(m_ioCtx, SIGINT, SIGTERM);
-  // signals.async_wait([&m_ioCtx](boost::system::error_code const &, int) {
-  //  // Stop the io_context. This will cause run()
-  //  // to return immediately, eventually destroying the
-  //  // io_context and any remaining handlers in it.
-  //  m_ioCtx.stop();
-  //});
-
   // Run the I/O service on the main thread
   m_ioCtx.run();
 }

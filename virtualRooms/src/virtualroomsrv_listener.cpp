@@ -30,8 +30,7 @@ listener::listener(boost::asio::io_context &ioCtx,
   }
 
   m_conn->add_room("Project Planning");
-
-} // namespace virtualroomsrv
+}
 
 void listener::accept() {
   auto socket =
@@ -42,13 +41,11 @@ void listener::accept() {
 }
 
 void listener::fail(boost::system::error_code ec, char const *what) {
-  // Don't report on canceled operations
   if (ec == boost::asio::error::operation_aborted)
     return;
   std::cerr << what << ": " << ec.message() << "\n";
 }
 
-// void listener::on_accept(boost::beast::error_code ec) {
 void listener::on_accept(std::shared_ptr<boost::asio::ip::tcp::socket> socket,
                          boost::system::error_code ec) {
   if (ec) {
@@ -56,22 +53,12 @@ void listener::on_accept(std::shared_ptr<boost::asio::ip::tcp::socket> socket,
     return;
   }
 
-  // std::make_shared<http_connection>(std::move(m_socket), m_conn)->run();
-
-  m_userid = std::make_shared<std::string>("");
-  // m_ids.push_back(m_userid);
-
   auto http_conn =
       std::make_shared<http_connection>(std::move(m_socket), m_conn);
 
-  std::cout << " ### out for a new connection \n";
   m_http_conns_vec.push_back(http_conn);
 
   accept();
-  // while (http_conn->m_userid == nullptr)
-  //  ;
-  // m_http_conns[*(http_conn->m_userid)] = http_conn;
-  // std::cout << "in listener con m_userid " << *(http_conn->m_userid) << "\n";
 }
 
 } // namespace virtualroomsrv

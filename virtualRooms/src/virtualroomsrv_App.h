@@ -11,7 +11,6 @@ namespace virtualroomsrv {
 class App {
 public:
   explicit App(const std::string_view &cfgFile);
-  int run();
 
 private:
   boost::asio::io_context m_ioCtx;

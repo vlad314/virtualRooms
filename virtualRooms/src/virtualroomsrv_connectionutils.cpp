@@ -25,11 +25,7 @@ void connection_utils::send(std::string payload) {
 void connection_utils::send_group(std::string payload, std::string room_name) {
   auto const p = std::make_shared<std::string const>(std::move(payload));
   auto connections = m_rooms_ptr[room_name];
-  std::cout << " -- m_rooms[" << room_name << "] = ";
-  /* for (auto c : connections) {
-     std::cout << c << " ";
-   }*/
-  std::cout << "\n";
+
   for (auto connection : connections)
     connection->send(p);
 }
@@ -71,6 +67,16 @@ void connection_utils::remove_user_from_room_ptr(const std::string &room,
 
 std::unordered_set<websocket_connection *> connection_utils::get_connections() {
   return m_connections;
+}
+
+std::unordered_map<std::string, std::list<std::string>> &
+connection_utils::get_m_rooms() {
+  return m_rooms;
+}
+
+std::unordered_map<websocket_connection *, std::string> &
+connection_utils::get_m_conns_room() {
+  return m_conns_room;
 }
 
 } // namespace virtualroomsrv
